@@ -1,0 +1,24 @@
+{
+  "family": "BudgetTask",
+  "containerDefinitions": [
+    {
+      "name": "budget-app-cd",
+      "image": "222634368934.dkr.ecr.eu-north-1.amazonaws.com/budget-app-cd:latest",
+      "memory": 512,
+      "cpu": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "hostPort": 8000,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ],
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::222634368934:role/ecsTaskExecutionRole",
+}
