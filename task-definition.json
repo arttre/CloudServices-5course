@@ -11,7 +11,9 @@
         {
           "containerPort": 8000,
           "hostPort": 8000,
-          "protocol": "tcp"
+          "protocol": "tcp",
+          "name": "8000",
+          "appProtocol": "http"
         }
       ]
     }
